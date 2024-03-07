@@ -10,8 +10,6 @@ export default {
       // async (ctx: HookContext) => {
       //   console.log("context data provider", ctx.params.provider)
       // }
-  
-      
     ],
     find: [],
     get: [],

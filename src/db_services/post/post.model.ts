@@ -63,7 +63,7 @@ export default function (app: Application): typeof Post {
     if (!exists) {
       db.schema.createTable('post', table => {
         table.increments('id');
-        table.integer('user');
+        table.integer('user').unsigned();
         table.string('title');
         table.string('description');
         table.integer('likeCount').defaultTo(0);

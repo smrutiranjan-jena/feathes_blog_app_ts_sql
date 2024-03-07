@@ -32,7 +32,7 @@ export interface UserTable_POST {
     followingCount: number,
     invitationCount: number,
     followersCount: number,
-    status:string,
+    status: string,
     createdAt: Date,
     updatedAt: Date
 }
@@ -58,6 +58,7 @@ export interface UserTable_QUERY {
     followingCount?: number,
     invitationCount?: number,
     followersCount?: number,
+    status?: string,
     createdAt?: Date,
     updatedAt?: Date
 }

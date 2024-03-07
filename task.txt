@@ -1,0 +1,26 @@
+User service
+1. There must be different users with unique email id.
+2. The user can only edit his / her details.
+3. Add a blogCount field to user and handle it on when new blog is added or deleted by user.
+
+Post Service
+1. Implement blog API along with the upload banner api
+	i.e. you have to pass the request to the API using form data
+2. The user can edit and delete his/her own blog.
+3. The users can access all the blogs.
+4. Handle the blogCount increment or decrement on the events of blog service.
+
+Like service
+1. Check if the blog is valid or not.
+2. userId will be automatically set from accessToken.
+3. if the user had already liked the blog then just return the object fromd db and the likeCount must not be increased in that case.
+4. use the remove method to dislike the blog. The user who has liked the blog can only remove it.
+5. The patch method must be made disallowed for the client.
+6. Increase likeCount using the help of events.
+
+Comment service
+1. Check if the blog is valid or not.
+2. userId will be automatically set from accessToken.
+3. use the remove method to dislike the blog. The user who has liked the blog can only remove it.
+4. The user who has given the comment can only edit that.
+5. Increase commentCount using the help of events.
