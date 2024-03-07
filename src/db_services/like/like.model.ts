@@ -50,8 +50,8 @@ export default function (app: Application): typeof Like {
     if (!exists) {
       db.schema.createTable('like', table => {
         table.increments('id');
-        table.integer('post');
-        table.integer('user');
+        table.integer('post').unsigned();
+        table.integer('user').unsigned();
         table.enum('status', [Like_Status.ACTIVE, Like_Status.DELETED]).defaultTo(Like_Status.ACTIVE)
         table.timestamp('createdAt');
         table.timestamp('updatedAt');
